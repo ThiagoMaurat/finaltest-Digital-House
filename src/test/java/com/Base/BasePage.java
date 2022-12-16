@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BasePage {
     public static WebDriver driver;
-    protected static final String URL = "https://opencart.abstracta.us/index.php?route=common/home";
+    protected static final String URL = "https://bugbank.netlify.app/";
 
     public BasePage() {
         this.driver = new ChromeDriver();

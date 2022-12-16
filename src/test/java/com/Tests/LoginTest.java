@@ -1,27 +1,26 @@
 package com.Tests;
 
-import com.Pages.Page01;
-import com.Pages.Page02;
+import com.Pages.Login;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class Test02 {
-    private static Page02 page2;
+public class LoginTest {
+    private static Login page2;
 
     @BeforeEach
     public void setUp() {
-        page2 = new Page02();
+        page2 = new Login();
         page2.openApp();
     }
 
     @Test
     public void searchIphoneTestAndAddToCart() throws InterruptedException {
-        page2.SearchTextAndPress();
-        page2.addToCart();
+        page2.FillInput();
+        page2.AcessButton();
         Thread.sleep(2000);
-        assertTrue(page2.verifyIfTextSucessed().contains("Success: You have added iPhone to your shopping cart!"));
+        assertTrue(page2.verifyIfTextSucessed().contains("Saldo em conta"));
     }
 
 }
