@@ -10,7 +10,7 @@ public class BasePage {
     protected static final String URL = "https://bugbank.netlify.app/";
 
     public BasePage() {
-        this.driver = new ChromeDriver();
+        BasePage.driver = new ChromeDriver();
     }
 
     public WebDriver getDriver() {
